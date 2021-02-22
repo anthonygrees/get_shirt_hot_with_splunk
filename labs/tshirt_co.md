@@ -6,4 +6,6 @@ Splunk T-shirts are almost as popular as our software. Splunkers and customers a
   
 [![Alt text](https://img.youtube.com/vi/tznLS9zuDyE/0.jpg)](https://youtu.be/tznLS9zuDyE)
   
+For more funny videos and information, check out the [blog here.](https://www.splunk.com/en_us/blog/splunklife/the-splunk-t-shirt-company.html)
+  
 [Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
