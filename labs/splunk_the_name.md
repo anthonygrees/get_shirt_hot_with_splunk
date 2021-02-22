@@ -13,6 +13,6 @@ When our founders set up Splunk they were looking around in the logs of computer
 ### Who founded Splunk ?
 Michael Baum, Rob Das and Erik Swan co-founded Splunk Inc in 2003.  
   
-https://youtu.be/BCQ4YF3ed-s
+[![Alt text](https://img.youtube.com/vi/BCQ4YF3ed-s/0.jpg)](https://youtu.be/BCQ4YF3ed-s)
   
 [Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
