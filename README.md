@@ -13,7 +13,7 @@ The following is the lab modules and material:
 | Item | Course  | 
 | :---: |:-------------| 
 |     | **About Splunk the Company** |
-| 1.  | [Where does the name Splunk come from ?](labs/splunk_the_name.md) |
+| 1.  | [Who founded Splunk and where does the name come from ?](labs/splunk_the_name.md) |
 | 2.  | [Splunk T-shirt Co.](labs/tshirt_co.md) |
 |     | |
 |     | **Splunk Architecture Overview** |
