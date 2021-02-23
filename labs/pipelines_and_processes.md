@@ -13,7 +13,11 @@ Data in Splunk moves through the data pipeline in phases. Input data originates 
 ![Splunk Logo](/images/pipelines_and_processes/datapipeline.png)
   
   
-  
+### Ingest and Flow
+The following diagram shows how input data traverses pipelines with buckets life-cycle concepts. It shows the concept of hot buckets, warm buckets, cold buckets and freezing buckets. Here are some definitions:  
+ - Pipeline : A thread. Splunk creates a thread for each pipeline. Multiple pipelines run in parallel.  
+ - Processor: Processes in pipeline.  
+ - Queue    : Memory space to store data between pipelines.  
   
 ![Splunk Logo](/images/pipelines_and_processes/ingestflow.png)
   
