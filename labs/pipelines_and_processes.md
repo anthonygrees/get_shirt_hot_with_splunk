@@ -1,5 +1,7 @@
 # How Indexing Works
   
+[Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
+  
 ### About
 When we think about log events life cycle in Splunk, we can think about:  
 1. Input stage - how to collect data  
@@ -28,3 +30,7 @@ The following diagram shows the detailed steps of the:
  - Splunk Indexer
   
 ![Splunk Logo](/images/pipelines_and_processes/splunkindexer.png)
+  
+  
+[Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
+  
