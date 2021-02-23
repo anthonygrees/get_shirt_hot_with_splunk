@@ -12,7 +12,7 @@ In Splunk's doc or presentations, Input and Indexing stages are often explained 
 ### Pipelines and Queues
 Data in Splunk moves through the data pipeline in phases. Input data originates from inputs such as files and network feeds. As it moves through the pipeline, processors transform the data into searchable events that encapsulate knowledge.  
   
-![Splunk Logo](/images/pipelines_and_processes/datapipeline.png)
+![Data Pipeline](/images/pipelines_and_processes/datapipeline.png)
   
   
 ### Ingest and Flow
@@ -21,7 +21,7 @@ The following diagram shows how input data traverses pipelines with buckets life
  - Processor: Processes in pipeline.  
  - Queue    : Memory space to store data between pipelines.  
   
-![Splunk Logo](/images/pipelines_and_processes/ingestflow.png)
+![Ingest Flow](/images/pipelines_and_processes/ingestflow.png)
   
   
 ### The Splunk UF and Indexer
@@ -29,7 +29,7 @@ The following diagram shows the detailed steps of the:
  - Splunk Universal Forwarder
  - Splunk Indexer
   
-![Splunk Logo](/images/pipelines_and_processes/splunkindexer.png)
+![Splunk Indexer](/images/pipelines_and_processes/splunkindexer.png)
   
   
 [Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
