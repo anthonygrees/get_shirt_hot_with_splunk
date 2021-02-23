@@ -21,3 +21,10 @@ The following diagram shows how input data traverses pipelines with buckets life
   
 ![Splunk Logo](/images/pipelines_and_processes/ingestflow.png)
   
+  
+### The Splunk UF and Indexer
+The following diagram shows the detailed steps of the:  
+ - Splunk Universal Forwarder
+ - Splunk Indexer
+  
+![Splunk Logo](/images/pipelines_and_processes/splunkindexer.png)
