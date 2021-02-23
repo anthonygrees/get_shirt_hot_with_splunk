@@ -17,7 +17,7 @@ The search head(s) are deployed into their own security group. Depending on your
 ### Splunk Cloud Deployment Architecture
 The following diagram represents the high-level architecture of a Splunk Cloud deployment and shows the integration points with a customers environment.  
   
-![Splunk Logo](/images/architecture/clodarchitecture.png)
+![Cloud Architecture](/images/architecture/cloudarchitecture.png)
   
 ### Further Details
 You can get more details on Splunk Validated Architectures [here](https://www.splunk.com/pdfs/technical-briefs/splunk-validated-architectures.pdf).
