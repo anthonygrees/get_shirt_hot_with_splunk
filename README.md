@@ -20,5 +20,7 @@ The following is the lab modules and material:
 | 3.  | [Pipelines and Processes: How Splunk processes data](labs/pipelines_and_processes.md) |
 | 4.  | [Splunk High Level Architecture](labs/architecture.md) |
 |     | |
+|     | **Training Modules** |
+| 5.  | TBD|
   
   
