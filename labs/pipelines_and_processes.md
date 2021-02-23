@@ -10,5 +10,10 @@ In Splunk's doc or presentations, Input and Indexing stages are often explained 
 ### Pipelines and Queues
 Data in Splunk moves through the data pipeline in phases. Input data originates from inputs such as files and network feeds. As it moves through the pipeline, processors transform the data into searchable events that encapsulate knowledge.  
   
-image
+![Splunk Logo](/images/pipelines_and_processes/datapipeline.png)
+  
+  
+  
+  
+![Splunk Logo](/images/pipelines_and_processes/ingestflow.png)
   
