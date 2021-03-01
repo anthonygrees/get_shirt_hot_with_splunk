@@ -21,7 +21,7 @@ The following is the lab modules and material:
 | 4.  | [Splunk High Level Architecture](labs/architecture.md) |
 |     | |
 |     | **Training Modules** |
-| 5.  | [Configure your Splunk Workshop Envrionment]()  |
+| 5.  | [Configure your Splunk Workshop Envrionment](labs/configure.md)  |
 | 6.  | []()  |
   
   
