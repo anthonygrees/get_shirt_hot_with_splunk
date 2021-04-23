@@ -37,12 +37,18 @@ resource "aws_kinesis_stream" "kinesis_stream" {
 }
 ```
   
-A great example of this is the repo created by Disney that you can view [here](https://github.com/disney/terraform-aws-kinesis-firehose-splunk).
+A great example of this is the repo created by Disney that you can view [here](https://github.com/disney/terraform-aws-kinesis-firehose-splunk).  
+  
+For more generic details on using Terraform to configure Kinesis you can read [this](https://github.com/easyawslearn/terraform-aws-kinesis).
   
   
 ##### 2. Trumpet
+![Trumpet](https://github.com/splunk/splunk-aws-project-trumpet/blob/master/README-static-assets/trumpet_logo.png)
+Trumpet is a tool that leverages AWS CloudFormation to set up all the AWS infrastructure needed to push AWS CloudTrail, AWS Config, and AWS GuardDuty data to Splunk using HTTP Event Collector (HEC).  
   
+The GitHub project for Trumpet is [here](https://github.com/splunk/splunk-aws-project-trumpet).
   
+You can fill in this online form and generate the CloudFormation code. [Link](https://splunktrumpet.github.io/)
   
 ##### 3. Splunk Observability
   
