@@ -3,7 +3,7 @@
 [Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
   
 ### About
-There are so many different AWS services and logs that can be sent to Splunk.  With most customer having multiple AWS accounts and organisations it is important to configure the way you bring your data in using automation.  The main reasons to use automation is:  
+There are so many different AWS services and logs that can be sent to Splunk.  With most customers having multiple AWS accounts and organisations it is important to configure the way you bring your data in using automation.  The main reasons to use automation is:  
 - it uses code to define your configurations.  
 - it is a pattern that can be used to configure 1, 2, 3 or 50 AWS accounts.  
 - it ensures each environment is configured identically and in a consitent way.  
@@ -140,6 +140,9 @@ The policy below gives permissions to collect data from every supported AWS serv
  ]
 }
 ```
+  
+For further details see the Splunk Docs site [here](https://docs.splunk.com/Observability/get-started/get-data-in/connect/aws.html#get-started-aws).
+  
   
   
 [Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
