@@ -23,5 +23,9 @@ The following is the lab modules and material:
 |     | **Training Modules** |
 | 5.  | [Configure your Splunk Workshop Envrionment](labs/configure.md)  |
 | 6.  | []()  |
+|     | |
+|     | **Helpful Links** |
+| 7.  | [GDI - Get Data In to Splunk](labs/gdi.md)  |
+| 8.  | []()  |
   
   
