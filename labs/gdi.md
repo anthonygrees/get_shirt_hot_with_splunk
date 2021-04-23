@@ -9,10 +9,10 @@ There are so many different AWS services and logs that can be sent to Splunk.  W
 - it ensures each environment is configured identically and in a consitent way.  
 - it is `code` so you can version control it and collaborate on it.    
   
-![GDI](/images/gdi.png)
+![GDI](/images/gdi/gdi.png)
   
   
-### Options
+### Your Options
 There are a number of automated options to configure the way data is sent into your Splunk environment.  Here are some details on the following methods:  
 - Terraform.  
 - Trumpet.  
