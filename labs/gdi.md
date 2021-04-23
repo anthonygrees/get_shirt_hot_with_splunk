@@ -62,7 +62,7 @@ Configuring CloudWatch Metric Streams delivery to Splunk Observability Cloud inv
 6. Configure AWS Kinesis Stream to forward metrics to Splunk Infrastructure Monitoring.  
 7. Use the Splunk Infrastructure Monitoring API to set the `metricStreamsSyncState` field to `ENABLED`.  
   
-The policy gives permissions to collect data from every supported AWS service. If you plan to collect data from only a subset of AWS services that Observability Cloud supports, you can modify the `Action` and `Resource` fields.  
+The policy below gives permissions to collect data from every supported AWS service. If you plan to collect data from only a subset of AWS services that Observability Cloud supports, you can modify the `Action` and `Resource` fields.  
   
 ```json
 {
