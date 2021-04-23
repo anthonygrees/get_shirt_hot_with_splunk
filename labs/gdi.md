@@ -43,7 +43,7 @@ For more generic details on using Terraform to configure Kinesis you can read [t
   
   
 ##### 2. Trumpet
-![Trumpet](https://github.com/splunk/splunk-aws-project-trumpet/blob/master/README-static-assets/trumpet_logo.png)
+![Trumpet](https://github.com/splunk/splunk-aws-project-trumpet/blob/master/README-static-assets/trumpet_logo.png)   
 Trumpet is a tool that leverages AWS CloudFormation to set up all the AWS infrastructure needed to push AWS CloudTrail, AWS Config, and AWS GuardDuty data to Splunk using HTTP Event Collector (HEC).  
   
 The GitHub project for Trumpet is [here](https://github.com/splunk/splunk-aws-project-trumpet).
