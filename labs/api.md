@@ -3,6 +3,8 @@
 [Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
   
 ### DMC API Commands
+The DMC is the Distributed Management Console and provides a set of API commands.
+  
   
 Ensure the DMC API is available for use.  
 ```bash
