@@ -6,7 +6,7 @@
   
 Create HEC Token. 
 ```bash
-curl -k -u admin:your_password -X POST -H "Content-Type: application/json" https://sh-i-023ea2e672f8a5a78.csms-oslbm8-42720.stg.splunkcloud.com:8089/services/dmc/config/inputs/__indexers/http -d '{"name":"SDREST1", "description":"token created via REST", "index":"main", "sourcetype":"json_no_timestamp"}' 
+curl -k -u admin:your_password -X POST -H "Content-Type: application/json" https://customer_splunk_url_name.splunkcloud.com:8089/services/dmc/config/inputs/__indexers/http -d '{"name":"SDREST1", "description":"token created via REST", "index":"main", "sourcetype":"json_no_timestamp"}' 
 ```
   
 List all HEC Tokens
