@@ -1,4 +1,6 @@
-#Splunk API Commands
+# Splunk API Commands
+  
+[Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
   
 ### DMC API Commands
   
@@ -26,6 +28,8 @@ Enable HEC Token
 ```bash
 curl -k -u admin:your_password -H "Content-Type: application/json" https://customer_splunk_url_name.splunkcloud.com:8089/services/dmc/config/inputs/__indexers/http/SDREST1 -d '{"disabled":"false"}'
 ```
+  
+[Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
   
 Update HEC Token
 ```bash
