@@ -4,6 +4,12 @@
   
 ### DMC API Commands
   
+Ensure the DMC API is available for use.  
+```bash
+curl -k -u admin:your_password https://CUSTOMER_NAME.splunkcloud.com:8089/services/dmc/info
+```
+If you get a response saying the DMC servive is ```enabled``` you can use the commands below.  
+  
 Create HEC Token. 
 ```bash
 curl -k -u admin:your_password -X POST -H "Content-Type: application/json" https://customer_splunk_url_name.splunkcloud.com:8089/services/dmc/config/inputs/__indexers/http -d '{"name":"Anthony1", "description":"token created via REST", "index":"main", "sourcetype":"json_no_timestamp"}' 
