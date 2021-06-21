@@ -2,10 +2,10 @@
   
 [Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
   
-| API           | Link          |
-| ------------- |:-------------:|
-| DMC API     | [Link]() |
-| ACS API     | [Link]() |
+| API           | Link         |
+| ------------- |:------------:|
+| DMC API - Distributed Management Console     | [Link](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/api.md#dmc-api-commands) |
+| ACS API - Admin Config Service    | [Link](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/api.md#acs-api-commands) |
   
 ### DMC API Commands
 The DMC is the Distributed Management Console and provides a set of API commands.
@@ -51,6 +51,49 @@ Delete HEC Token
 ```bash
 curl -k -u admin:your_password -X DELETE https://customer_splunk_url_name.splunkcloud.com:8089/services/dmc/config/inputs/__indexers/http/Anthony1
 ```
+  
+  
+  
+### ACS API Commands
+Admin config service (ACS) commands to support operations on HEC via service.
+  
+Add HEC Token.  
+```bash
+curl --location --request POST 'admin.splunk.com/:stack/adminconfig/v1/inputs/http-event-collectors' \
+--header 'Authorization: Bearer <token>' \
+--data-raw '{
+    “name” : “tokenname”,
+    "defaultIndex": "idx",
+    "defaultSource": "default_source",
+    "defaultHost": "somehost.com",
+    "defaultSourceType": "source_type",
+    "disabled": false,
+    "allowedIndexes": [
+        "idx",
+        "notidx"
+    ]
+}'
+```
+  
+Get HEC Token.  
+```bash
+curl --location --request GET 'admin.splunk.com/:stack/adminconfig/v1/inputs/http-event-collectors' \
+--header 'Authorization: Bearer <token>'
+```
+  
+Get HEC Name.  
+```bash
+curl --location --request GET 'admin.splunk.com/:stack/adminconfig/v1/hec/newhectoken' \
+--header 'Authorization: Bearer <token>'
+```
+  
+Delete HEC Name.  
+```bash
+curl --location --request DELETE 'admin.splunk.com/:stack/adminconfig/v1/inputs/http-event-collectors/:hecname' \
+--header 'Authorization: Bearer <token>' \
+--data-raw '{}'
+```
+  
   
   
 [Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
