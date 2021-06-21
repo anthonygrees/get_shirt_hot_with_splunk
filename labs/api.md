@@ -2,6 +2,11 @@
   
 [Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
   
+| API           | Link          |
+| ------------- |:-------------:|
+| DMC API     | [Link]() |
+| ACS API     | [Link]() |
+  
 ### DMC API Commands
 The DMC is the Distributed Management Console and provides a set of API commands.
   
