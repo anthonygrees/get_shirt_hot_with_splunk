@@ -163,7 +163,6 @@ The ACS API supports several common IP allow list use cases. In each use case, t
   
 | Use Case	| Feature Type	| Port	| Description |
 | ------------- |:------------:| ------------- |:------------:|
-| Use Case	| Feature Type |	Port	| Description |
 | Search head API access |	search-api |	8089 |	Grants access for customer subnets to Splunk search head api (applies to automated interfaces) |
 | HEC access for ingestion |	hec |	443	| Allows customer's environment to send HTTP data to Splunk indexers. |
 | Indexer ingestion |	s2s |	9997 |	Allows subnets that include UF or HF to send data to Splunk indexers. |
