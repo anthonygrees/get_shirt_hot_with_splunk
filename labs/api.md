@@ -2,6 +2,17 @@
   
 [Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
   
+## About the API
+The splunk cloud admin api is intended to empower the customer admins to manage their Splunk Cloud Stacks.  
+  
+  
+## ACS
+The ACS (Admin Config Service) is an external facing service that will actually handle the API requests from the Splunk Cloud Admins. The service will in-turn translate the calls to the various internal systems to honour the admins requests as required.  
+  
+## C02 Framework
+co2 is the existing framework that manages the infrastructure that runs the splunk cloud stacks. co2 is based on the kubernetes operator model, where every stack is tracked by the Stacks (CRD) Custom Resource Definition. The splunk-cloud-operator then keeps watching these CRDs and updates the splunk stacks and their infrastructure as required to match the requested specifications in their respective CRDs.  
+
+  
 | API           | Link         |
 | ------------- |:------------:|
 | DMC API - Distributed Management Console     | [Link](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/api.md#dmc-api-commands) |
