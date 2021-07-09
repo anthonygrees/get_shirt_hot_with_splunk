@@ -19,18 +19,28 @@ The DMC is the Distributed Management Console and provides a set of API commands
   
 ## C02 Framework
 co2 is the existing framework that manages the infrastructure that runs the splunk cloud stacks. co2 is based on the kubernetes operator model, where every stack is tracked by the Stacks (CRD) Custom Resource Definition. The splunk-cloud-operator then keeps watching these CRDs and updates the splunk stacks and their infrastructure as required to match the requested specifications in their respective CRDs.  
-
   
-| API           | Link         |
+  
+## API Sections
+  
+| API Section           | Link         |
 | ------------- |:------------:|
-|  * Manage HTTP Event Collector (HEC) tokens |          |
-| HEC - DMC API     | [Link](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/api.md#dmc-api-commands) |
-| HEC - ACS API    | [Link](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/api.md#acs-api-commands) |
-|  * Configure IP allow lists for Splunk Cloud         |          |
-|  * HEC          |          |
-|  * HEC          |          |
+|            |          |
+|  1. Set up the ACS API  |          |
+|            |          |
+|  2. Manage HTTP Event Collector (HEC) tokens |          |
+| 2a. HEC - DMC API     | [Link](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/api.md#dmc-api-commands) |
+| 2b. HEC - ACS API    | [Link](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/api.md#acs-api-commands) |
+|            |          |
+|  3. Configure IP allow lists for Splunk Cloud         |          |
+|            |          |
+|  4. Manage Indexes on SplunkCloud          |          |
+|            |          |
+|  5. Apps          |          |
   
-### DMC API Commands
+  
+  
+### 2a. HEC - DMC API Commands
 The DMC is the Distributed Management Console and provides a set of API commands.
   
   
@@ -77,7 +87,7 @@ curl -k -u admin:your_password -X DELETE https://customer_splunk_url_name.splunk
   
   
   
-### ACS API Commands
+### 2b. HEC - ACS API Commands
 Admin config service (ACS) commands to support operations on HEC via service.
   
 Add HEC Token.  
