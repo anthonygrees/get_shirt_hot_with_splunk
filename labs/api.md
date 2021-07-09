@@ -161,8 +161,8 @@ Splunk Cloud IP allow lists control which IP addresses on your network have acce
 3a. Determine IP allow list use case
 The ACS API supports several common IP allow list use cases. In each use case, the IP allow list controls access to a particular Splunk Cloud feature. 
   
-| API Section           | Link         |
-| ------------- |:------------:|
+| Use Case	| Feature Type	| Port	| Description |
+| ------------- |:------------:| ------------- |:------------:|
 | Use Case	| Feature Type |	Port	| Description |
 | Search head API access |	search-api |	8089 |	Grants access for customer subnets to Splunk search head api (applies to automated interfaces) |
 | HEC access for ingestion |	hec |	443	| Allows customer's environment to send HTTP data to Splunk indexers. |
