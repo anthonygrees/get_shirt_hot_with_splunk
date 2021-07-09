@@ -170,16 +170,16 @@ The ACS API supports several common IP allow list use cases. In each use case, t
 | IDM UI access |	idm-ui |	443 |	Grant explicit access to IDM UI in regulated customer environments. |
 | IDM API |	idm-api |	8089 |	Grant access for add-ons that require an API. (Allows add-ons to send data to Splunk Cloud.) |
   
-3b. View current IP Allow list
-To view the full list of existing subnets for a particular IP allow list feature type, send an HTTP GET request to the following endpoint:
+3b. View current IP Allow list.  
+To view the full list of existing subnets for a particular IP allow list feature type, send an HTTP GET request to the following endpoint:  
 ```bash
 {baseUrl}/{stack}/adminconfig/v1/access/{feature}/ipallowlists
 ```
-For example, to view the full list of subnets for the s2s IP allow list feature type, send the following request:
+For example, to view the full list of subnets for the s2s IP allow list feature type, send the following request:  
 ```bash
 curl https://admin.splunk.com/{stack}/adminconfig/v1/access/s2s/ipallowlists
 ```
-The request returns the current allow list subnets for the s2s feature type only. For example:
+The request returns the current allow list subnets for the s2s feature type only. For example:  
   
 ```bash
 {
