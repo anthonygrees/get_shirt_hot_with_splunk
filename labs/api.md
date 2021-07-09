@@ -155,6 +155,43 @@ curl --location --request DELETE 'admin.splunk.com/:stack/adminconfig/v1/inputs/
 ```
   
   
+### 3. Configure IP allow lists for Splunk Cloud
+Splunk Cloud IP allow lists control which IP addresses on your network have access to specified components (features) in your Splunk Cloud deployment. You can use the Splunk Cloud Admin Config Service (ACS) API to add or remove subnets from the allow list and manage access to features in your Splunk Cloud environment programmatically.  
+  
+3a. Determine IP allow list use case
+The ACS API supports several common IP allow list use cases. In each use case, the IP allow list controls access to a particular Splunk Cloud feature. 
+  
+| API Section           | Link         |
+| ------------- |:------------:|
+| Use Case	| Feature Type |	Port	| Description |
+| Search head API access |	search-api |	8089 |	Grants access for customer subnets to Splunk search head api (applies to automated interfaces) |
+| HEC access for ingestion |	hec |	443	| Allows customer's environment to send HTTP data to Splunk indexers. |
+| Indexer ingestion |	s2s |	9997 |	Allows subnets that include UF or HF to send data to Splunk indexers. |
+| SH UI access |	search-ui |	80/443	| Grant explicit access to search head UI in regulated customer environments. |
+| IDM UI access |	idm-ui |	443 |	Grant explicit access to IDM UI in regulated customer environments. |
+| IDM API |	idm-api |	8089 |	Grant access for add-ons that require an API. (Allows add-ons to send data to Splunk Cloud.) |
+  
+3b. View current IP Allow list
+To view the full list of existing subnets for a particular IP allow list feature type, send an HTTP GET request to the following endpoint:
+```bash
+{baseUrl}/{stack}/adminconfig/v1/access/{feature}/ipallowlists
+```
+For example, to view the full list of subnets for the s2s IP allow list feature type, send the following request:
+```bash
+curl https://admin.splunk.com/{stack}/adminconfig/v1/access/s2s/ipallowlists
+```
+The request returns the current allow list subnets for the s2s feature type only. For example:
+  
+```bash
+{
+  "subnets": [
+     ": #.0.0.0/24",
+     ": #.0.0.0/24",
+     ": #.0.10.6/32"
+  ]
+}
+```
+  
   
 [Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
   
