@@ -3,12 +3,19 @@
 [Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
   
 ## About the API
-The splunk cloud admin api is intended to empower the customer admins to manage their Splunk Cloud Stacks.  
+The splunk cloud admin api is intended to empower the customer admins to manage their Splunk Cloud Stacks. 
+ - Victoria Experience uses ACS
+ - Classic Experience uses DMC
+   
+The following diagram shows the ACS architecture on the CO2 framework.  
   
 ![Architecture](/images/api/acs_architecture.png)
   
 ## ACS
-The ACS (Admin Config Service) is an external facing service that will actually handle the API requests from the Splunk Cloud Admins. The service will in-turn translate the calls to the various internal systems to honour the admins requests as required.  
+The ACS (Admin Config Service) is an external facing service that will actually handle the API requests from the Splunk Cloud Admins. The service will in-turn translate the calls to the various internal systems to honour the admins requests as required. It works for SplunkCloud versions on Victoria experience. You can Determine your SplunkCloud experience [here](https://docs.splunk.com/Documentation/SplunkCloud/8.2.2105/Admin/Experience).
+  
+## DMC
+The DMC is the Distributed Management Console and provides a set of API commands. It works for SplunkCloud versions on Classic experience.
   
 ## C02 Framework
 co2 is the existing framework that manages the infrastructure that runs the splunk cloud stacks. co2 is based on the kubernetes operator model, where every stack is tracked by the Stacks (CRD) Custom Resource Definition. The splunk-cloud-operator then keeps watching these CRDs and updates the splunk stacks and their infrastructure as required to match the requested specifications in their respective CRDs.  
@@ -16,8 +23,12 @@ co2 is the existing framework that manages the infrastructure that runs the splu
   
 | API           | Link         |
 | ------------- |:------------:|
-| DMC API - Distributed Management Console     | [Link](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/api.md#dmc-api-commands) |
-| ACS API - Admin Config Service    | [Link](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/api.md#acs-api-commands) |
+|  * Manage HTTP Event Collector (HEC) tokens |          |
+| HEC - DMC API     | [Link](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/api.md#dmc-api-commands) |
+| HEC - ACS API    | [Link](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/api.md#acs-api-commands) |
+|  * Configure IP allow lists for Splunk Cloud         |          |
+|  * HEC          |          |
+|  * HEC          |          |
   
 ### DMC API Commands
 The DMC is the Distributed Management Console and provides a set of API commands.
