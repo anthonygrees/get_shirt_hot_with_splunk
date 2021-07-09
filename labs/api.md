@@ -5,6 +5,7 @@
 ## About the API
 The splunk cloud admin api is intended to empower the customer admins to manage their Splunk Cloud Stacks.  
   
+![Architecture](/images/api/acs_architecture.png)
   
 ## ACS
 The ACS (Admin Config Service) is an external facing service that will actually handle the API requests from the Splunk Cloud Admins. The service will in-turn translate the calls to the various internal systems to honour the admins requests as required.  
