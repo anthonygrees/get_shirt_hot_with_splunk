@@ -1,4 +1,4 @@
-# Splunk API Commands
+# Splunk API Commands - Cheat Sheet
   
 [Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
   
