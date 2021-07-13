@@ -34,9 +34,9 @@ co2 is the existing framework that manages the infrastructure that runs the splu
 |            |          |
 |  3. Configure IP allow lists for Splunk Cloud | [Link](../labs/api.md#3-configure-ip-allow-lists-for-splunk-cloud)     |
 |            |          |
-|  4. Manage Indexes on SplunkCloud     |          |
+|  4. Manage Indexes on SplunkCloud  | [Link](../labs/api.md#4-manage-indexes) |
 |            |          |
-|  5. Apps          |          |
+|  5. Install Private App on SplunkCloud  |          |
   
   
   
@@ -286,6 +286,76 @@ Status of index is returned on a describe/list request that contains the sync st
       ]
     }
   }
+```
+  
+### 5. Install Private App on SplunkCloud
+ACS lets you manage private (custom) apps on your Splunk Cloud stack. For this example, we will assume you have a well-structured app that is ready for AppInspect validation.  
+  
+For more information on Splunk AppInspect, see https://dev.splunk.com/enterprise/docs/developapps/testvalidate/appinspect/   
+  
+##### 5a. Authenticate
+AppInspect relies on a separate set of credentials that are distinct from your environment. You must provide your Splunk.com credentials to receive a JSON Web Token (JWT) for AppInspect. 
+  
+```bash
+https://api.splunk.com/2.0/rest/login/splunk
+```
+ - `Username`
+ - `Password`
+  
+##### 5b. Validate the App Package
+With AppInspect: Select the app package tar file and set a flag to trigger the automated private app vetting process. 
+  
+```bash
+https://appinspect.splunk.com/v1/app/validate
+```
+ - `app_package` - Pass in the `tar.gz` of the app.  
+ - `included_tags` - Specify `private_app`.  
+  
+Your response will include:  
+```json
+{
+  "request_id": "cd04hjds-uiasdj-iuhasd-2jkh23",
+  "message": "Validation request submissted.",
+  "links": [
+        {
+            "href": "/v1/app/validate/status/cd04hjds-uiasdj-iuhasd-2jkh23",
+            "rel": "status"
+        
+        }
+  ]
+}
+```
+  
+  
+##### 5c. Check the Status of the App Submission
+
+```bash
+https://appinspect.splunk.com/v1/app/report/{{request_id}}
+```
+  
+Your response will include:  
+```json
+{
+  "request_id": "cd04hjds-uiasdj-iuhasd-2jkh23",
+  "message": "Validation request submissted.",
+  "links": [
+        {
+            "href": "/v1/app/validate/status/cd04hjds-uiasdj-iuhasd-2jkh23",
+            "rel": "status"
+        
+        }
+  ],
+  "status": "SUCCESS",
+  "info": {
+        "error": 0,
+        "failure": 0,
+        "skipped": 0,
+        "manual_check": 0,
+        "not_applicable": 68,
+        "warning": 1,
+        "success": 89
+  }
+}
 ```
   
   
