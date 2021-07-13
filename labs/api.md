@@ -41,7 +41,7 @@ co2 is the existing framework that manages the infrastructure that runs the splu
   
   
 ### 1. Set up the ACS API
-#####1a. Retrieve the ACS Open API 3.0 specification.  
+##### 1a. Retrieve the ACS Open API 3.0 specification.  
 ACS provides an OpenAPI 3.0 specification that includes all parameters, response codes, and other meta data that you need to send requests to the ACS API endpoint.  
   
 To retrieve the ACS Open API 3.0 specification, send an HTTP GET request to:  
@@ -49,7 +49,7 @@ To retrieve the ACS Open API 3.0 specification, send an HTTP GET request to:
 https://admin.splunk.com/service/info/specs/v1/openapi.json
 ```
   
-#####1b. Generate an authentication token. 
+##### 1b. Generate an authentication token. 
 The ACS API accepts a SAML authentication token. You can generate this token in the Splunk Cloud UI. If your Splunk Cloud environment does not support SAML, you can use local accounts as an alternate authentication method.  
   
 To generate a token in Splunk Cloud:  
@@ -160,7 +160,7 @@ curl --location --request DELETE 'admin.splunk.com/:stack/adminconfig/v1/inputs/
 ### 3. Configure IP allow lists for Splunk Cloud
 Splunk Cloud IP allow lists control which IP addresses on your network have access to specified components (features) in your Splunk Cloud deployment. You can use the Splunk Cloud Admin Config Service (ACS) API to add or remove subnets from the allow list and manage access to features in your Splunk Cloud environment programmatically.  
   
-#####3a. Determine IP allow list use case
+##### 3a. Determine IP allow list use case
 The ACS API supports several common IP allow list use cases. In each use case, the IP allow list controls access to a particular Splunk Cloud feature. 
   
 | Use Case	| Feature Type	| Port	| Description |
@@ -172,7 +172,7 @@ The ACS API supports several common IP allow list use cases. In each use case, t
 | IDM UI access |	idm-ui |	443 |	Grant explicit access to IDM UI in regulated customer environments. |
 | IDM API |	idm-api |	8089 |	Grant access for add-ons that require an API. (Allows add-ons to send data to Splunk Cloud.) |
   
-#####3b. View current IP Allow list.  
+##### 3b. View current IP Allow list.  
 To view the full list of existing subnets for a particular IP allow list feature type, send an HTTP GET request to the following endpoint:  
 ```bash
 {baseUrl}/{stack}/adminconfig/v1/access/{feature}/ipallowlists
@@ -193,7 +193,7 @@ The request returns the current allow list subnets for the s2s feature type only
 }
 ```
   
-#####3c. Add subnets to IP allow list
+##### 3c. Add subnets to IP allow list
 To add a new subnet to the IP allow list:  
   
 Send an HTTP POST request to the ```{feature}/ipallowlists``` endpoint, specifying the subnet that you want to add. For example, to add new subnets to the IP allow list for the s2s feature:  
@@ -220,7 +220,7 @@ ACS returns one of the following status responses:
  - `Pending`  
  - `Failed`  
   
-#####3d. Remove subnets from IP allow list    
+##### 3d. Remove subnets from IP allow list    
 To remove a subnet from an IP allow list:  
   
 Send an HTTP DELETE request specifying the subnet you want to delete. For example, to remove subnets from the IP allow list for the s2s feature:  
@@ -236,7 +236,7 @@ curl -X DELETE 'https://admin.splunk.com/mystack/adminconfig/v1/access/s2s/ipall
 }'
 ``` 
   
-#####3e. Confirm IP allow list update.  
+##### 3e. Confirm IP allow list update.  
 To verify that your IP allow list has been updated as expected by POST or DELETE requests:  
   
 Send an HTTP GET request specifying the {stack} value (URL prefix of your Splunk Cloud deployment) as follows:
