@@ -49,7 +49,7 @@ To retrieve the ACS Open API 3.0 specification, send an HTTP GET request to:
 https://admin.splunk.com/service/info/specs/v1/openapi.json
 ```
   
-You can view a `JSON` formatted verion [here](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/splunk_openapi.json).
+You can view a `JSON` formatted verion [here](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/splunk_openapi_v1.json).
   
 ##### 1b. Generate an authentication token. 
 The ACS API accepts a SAML authentication token. You can generate this token in the Splunk Cloud UI. If your Splunk Cloud environment does not support SAML, you can use local accounts as an alternate authentication method.  
@@ -299,6 +299,7 @@ This API is a `Beta` and you will need a different `openapi.json` to the one abo
 https://admin.splunk.com/service/info/specs/v2beta1/openapi.json
 ```
   
+You can view a `JSON` formatted verion [here](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/splunk_openapi_v2beta.json).
   
 ##### 5a. Authenticate
 AppInspect relies on a separate set of credentials that are distinct from your environment. You must provide your Splunk.com credentials to receive a JSON Web Token (JWT) for AppInspect. 
