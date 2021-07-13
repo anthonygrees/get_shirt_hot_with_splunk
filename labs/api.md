@@ -21,7 +21,7 @@ The DMC is the Distributed Management Console and provides a set of API commands
 co2 is the existing framework that manages the infrastructure that runs the splunk cloud stacks. co2 is based on the kubernetes operator model, where every stack is tracked by the Stacks (CRD) Custom Resource Definition. The splunk-cloud-operator then keeps watching these CRDs and updates the splunk stacks and their infrastructure as required to match the requested specifications in their respective CRDs.  
   
   
-## API Sections
+## Table of Contents
   
 | API Section           | Link         |
 | ------------- |:------------:|
