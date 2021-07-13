@@ -191,6 +191,59 @@ The request returns the current allow list subnets for the s2s feature type only
 }
 ```
   
+3c. Add subnets to IP allow list
+To add a new subnet to the IP allow list:  
+  
+Send an HTTP POST request to the ```{feature}/ipallowlists``` endpoint, specifying the subnet that you want to add. For example, to add new subnets to the IP allow list for the s2s feature:  
+```bash
+curl -X POST 'https://admin.splunk.com/mystack/v1/access/s2s/ipallowlists' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJraWQiOiJzcGx1bmsuc2VjcmV0Iiw...' \
+--data-raw '{
+"subnets": [
+"###.0.0.0/24",
+"##.0.10.6/32"
+]
+}'
+```
+  
+A `200` response code indicates that your request was submitted successfully. Note however that the ACS request process is asynchronous and it can take several minutes for the subnet update to be applied to your Splunk Cloud deployment.  
+  
+You can check the status of your subnet update request, as follows: 
+```bash
+curl GET https://admin.splunk.com/{stack}/adminconfig/v1/status
+```
+ACS returns one of the following status responses:
+ - `Ready`  
+ - `Pending`  
+ - `Failed`  
+  
+3d. Remove subnets from IP allow list    
+To remove a subnet from an IP allow list:  
+  
+Send an HTTP DELETE request specifying the subnet you want to delete. For example, to remove subnets from the IP allow list for the s2s feature:  
+```bash
+curl -X DELETE 'https://admin.splunk.com/mystack/adminconfig/v1/access/s2s/ipallowlists' \
+--header 'Authorization: Bearer eyJraWQiOiJzcGx1bmsuc2Vj...' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"subnets": [
+"###.0.0.0/24",
+"##.0.10.6/32"
+]
+}'
+``` 
+  
+3e. Confirm IP allow list update.  
+To verify that your IP allow list has been updated as expected by POST or DELETE requests:  
+  
+Send an HTTP GET request specifying the {stack} value (URL prefix of your Splunk Cloud deployment) as follows:
+```bash
+curl https://admin.splunk.com/mystack/adminconfig/v1/status\
+--header 'stack: mystack' \
+--header 'Authorization: Bearer eyJraWQiOiJzcGx1bmsuc2...'
+```
+  
   
 [Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
   
