@@ -293,6 +293,13 @@ ACS lets you manage private (custom) apps on your Splunk Cloud stack. For this e
   
 For more information on Splunk AppInspect, see https://dev.splunk.com/enterprise/docs/developapps/testvalidate/appinspect/   
   
+This API is a `Beta` and you will need a different `openapi.json` to the one above.  
+  
+```bash
+https://admin.splunk.com/service/info/specs/v2beta1/openapi.json
+```
+  
+  
 ##### 5a. Authenticate
 AppInspect relies on a separate set of credentials that are distinct from your environment. You must provide your Splunk.com credentials to receive a JSON Web Token (JWT) for AppInspect. 
   
@@ -328,14 +335,15 @@ Your response will include:
   
   
 ##### 5c. Check the Status of the App Submission
-Check the status of your App submission. Your will need the request ID for these subsequent API requests. 
+Check the status of your App submission. Your will need the request ID for these subsequent API requests.  
   
-The app package is now officially approved by AppInspect. Please see the output for a validation summary below.
   
 ```bash
 https://appinspect.splunk.com/v1/app/report/{{request_id}}
 ```
   
+  
+The app package is now officially approved by AppInspect. Please see the output for a validation summary below.  
 Your response will include:  
 ```json
 {
