@@ -374,6 +374,15 @@ Your response will include:
   
   
 ### 6. Manage Apps on SplunkCloud
+Manage the Apps on your SplunkCloud stack.
+  
+This API is a `Beta` and you will need a different `openapi.json` to the one above.  
+  
+```bash
+https://admin.splunk.com/service/info/specs/v2beta1/openapi.json
+```
+  
+You can view a `JSON` formatted verion [here](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/splunk_openapi_v2beta.json).
   
 ##### 6a. List Apps available
 List apps available on the stacks.  
