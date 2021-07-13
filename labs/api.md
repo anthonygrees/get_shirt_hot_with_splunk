@@ -248,6 +248,47 @@ curl https://admin.splunk.com/mystack/adminconfig/v1/status\
 --header 'Authorization: Bearer eyJraWQiOiJzcGx1bmsuc2...'
 ```
   
+### 4. Manage Indexes
+Manage the indexes on the splunk stack. The service will update the k8s custom resource corresponding to the stack and the controller will apply the changes.  
+  
+```bash
+<tenant>/cloudadmin/v1/indexes
+```
+ - `GET` - List indexes - Idempotent  
+ - `POST` - Add a new index, fails if token with the name already exists.  
+ - `PUT` - Bulk index updates, where multiple updates can be performed using the same request - Idempotent.  
+  
+```bash
+<tenant>/cloudadmin/v1/indexes/<name>
+```
+ - `GET` - Describe the index - Idempotent
+ - `PUT` - Update an existing index, create one if one does not exist - Idempotent
+ - `DELETE` - Delete an index if it exits - Idempotent
+  
+Definition of an index :  
+```json
+"spec": {
+    "dataType": "event/metrics",
+    "maxDataSizeStratergy": "auto",
+    "maxDataSize": 0,
+    "maxHotBuckets": 0,
+    "maxWarmDBCount": 0
+  }
+```
+  
+Status of index is returned on a describe/list request that contains the sync status.   
+```json
+  "status": {
+    "status": {
+      "state": "SYNC_SUCCESS",
+      "errors": [
+        "string"
+      ]
+    }
+  }
+```
+  
+  
   
 [Back to the Lab Index](../README.md#get-shirt-hot-with-splunk)
   
