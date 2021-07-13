@@ -71,57 +71,57 @@ When using the curl command, you must pass the above parameters with the ACS API
   
 ### 2. HEC - Manage HTTP Event Collector (HEC) tokens
   
-##### 2a. HEC - DMC API Commands (Classic)
+##### 2.1. HEC - DMC API Commands (Classic)
 The DMC is the Distributed Management Console and provides a set of API commands.
   
   
-Ensure the DMC API is available for use.  
+###### 2.1a Ensure the DMC API is available for use.  
 ```bash
 curl -k -u admin:your_password https://CUSTOMER_NAME.splunkcloud.com:8089/services/dmc/info
 ```
 If you get a response saying the DMC servive is ```enabled``` you can use the commands below.  
   
-Create HEC Token. 
+###### 2.1b Create HEC Token. 
 ```bash
 curl -k -u admin:your_password -X POST -H "Content-Type: application/json" https://customer_splunk_url_name.splunkcloud.com:8089/services/dmc/config/inputs/__indexers/http -d '{"name":"Anthony1", "description":"token created via REST", "index":"main", "sourcetype":"json_no_timestamp"}' 
 ```
   
-List all HEC Tokens
+###### 2.1c List all HEC Tokens
 ```bash
 curl -k -u admin:your_password https://customer_splunk_url_name.splunkcloud.com:8089/services/dmc/config/inputs/__indexers/http
 ```
   
-List HEC Token by Name
+###### 2.1d List HEC Token by Name
 ```bash
 curl -k -u admin:your_password https://customer_splunk_url_name.splunkcloud.com:8089/services/dmc/config/inputs/__indexers/http/Anthony1
 ```
   
-Disable HEC Token
+###### 2.1e Disable HEC Token
 ```bash
 curl -k -u admin:your_password -H "Content-Type: application/json" https://customer_splunk_url_name.splunkcloud.com:8089/services/dmc/config/inputs/__indexers/http/Anthony1 -d '{"disabled":"true"}'
 ```
   
-Enable HEC Token
+###### 2.1f Enable HEC Token
 ```bash
 curl -k -u admin:your_password -H "Content-Type: application/json" https://customer_splunk_url_name.splunkcloud.com:8089/services/dmc/config/inputs/__indexers/http/Anthony1 -d '{"disabled":"false"}'
 ```
   
-Update HEC Token
+###### 2.1g Update HEC Token
 ```bash
 curl -k -u admin:your_password -H "Content-Type: application/json" https://customer_splunk_url_name.splunkcloud.com:8089/services/dmc/config/inputs/__indexers/http/Anthony1 -d '{"description":"Updated Description"}'
 ```
   
-Delete HEC Token
+###### 2.1h Delete HEC Token
 ```bash
 curl -k -u admin:your_password -X DELETE https://customer_splunk_url_name.splunkcloud.com:8089/services/dmc/config/inputs/__indexers/http/Anthony1
 ```
   
   
   
-##### 2b. HEC - ACS API Commands (Victoria Experience)
+##### 2.2. HEC - ACS API Commands (Victoria Experience)
 Admin config service (ACS) commands to support operations on HEC via service.
   
-Add HEC Token.  
+###### 2.2a Add HEC Token.  
 ```bash
 curl --location --request POST 'admin.splunk.com/:stack/adminconfig/v1/inputs/http-event-collectors' \
 --header 'Authorization: Bearer <token>' \
@@ -139,19 +139,19 @@ curl --location --request POST 'admin.splunk.com/:stack/adminconfig/v1/inputs/ht
 }'
 ```
   
-Get HEC Token.  
+###### 2.2b Get HEC Token.  
 ```bash
 curl --location --request GET 'admin.splunk.com/:stack/adminconfig/v1/inputs/http-event-collectors' \
 --header 'Authorization: Bearer <token>'
 ```
   
-Get HEC Name.  
+###### 2.2c Get HEC Name.  
 ```bash
 curl --location --request GET 'admin.splunk.com/:stack/adminconfig/v1/hec/newhectoken' \
 --header 'Authorization: Bearer <token>'
 ```
   
-Delete HEC Name.  
+###### 2.2d Delete HEC Name.  
 ```bash
 curl --location --request DELETE 'admin.splunk.com/:stack/adminconfig/v1/inputs/http-event-collectors/:hecname' \
 --header 'Authorization: Bearer <token>' \
