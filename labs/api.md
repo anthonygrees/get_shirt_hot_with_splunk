@@ -328,7 +328,10 @@ Your response will include:
   
   
 ##### 5c. Check the Status of the App Submission
-
+Check the status of your App submission. Your will need the request ID for these subsequent API requests. 
+  
+The app package is now officially approved by AppInspect. Please see the output for a validation summary below.
+  
 ```bash
 https://appinspect.splunk.com/v1/app/report/{{request_id}}
 ```
