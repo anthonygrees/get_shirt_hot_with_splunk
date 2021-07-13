@@ -375,6 +375,20 @@ Your response will include:
   
 ### 6. Manage Apps on SplunkCloud
   
+##### 6a. List Apps available
+List apps available on the stacks.  
+  
+```bash
+curl GET https://admin.splunk.com/{stack}/adminconfig/v2beta1/apps
+```
+  
+##### 6b. Uninstall App
+Uninstall the app on the stack.   
+  
+```bash
+curl DELETE https://admin.splunk.com/{stack}/adminconfig/v2beta1/apps/{app}
+```
+
   
   
   
