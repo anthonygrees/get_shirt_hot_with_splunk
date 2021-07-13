@@ -29,7 +29,7 @@ co2 is the existing framework that manages the infrastructure that runs the splu
 |  1. Set up the ACS API  |   [Link](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/api.md#1-set-up-the-acs-api)       |
 |            |          |
 | 2. Manage HTTP Event Collector (HEC) tokens |          |
-| 2a. HEC - DMC API for Classic Experience   | [Link](../api.md#2a-hec---dmc-api-commands) |
+| 2a. HEC - DMC API for Classic Experience   | [Link](../labs/api.md#2a-hec---dmc-api-commands) |
 | 2b. HEC - ACS API for Victoria Experience  | [Link](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/api.md#2b-hec---acs-api-commands) |
 |            |          |
 |  3. Configure IP allow lists for Splunk Cloud         |     [Link](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/api.md#3-configure-ip-allow-lists-for-splunk-cloud)     |
