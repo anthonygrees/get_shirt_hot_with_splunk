@@ -37,6 +37,8 @@ co2 is the existing framework that manages the infrastructure that runs the splu
 |  4. Manage Indexes on SplunkCloud  | [Link](../labs/api.md#4-manage-indexes) |
 |            |          |
 |  5. Install Private App on SplunkCloud  | [Link](../labs/api.md#5-install-private-app-on-splunkcloud) |
+|            |          |
+|  6. Manage App's on SplunkCloud  | [Link](../labs/api.md#6-manage-apps-on-splunkcloud) |
   
   
   
@@ -369,6 +371,10 @@ Your response will include:
   }
 }
 ```
+  
+  
+### 6. Manage Apps on SplunkCloud
+  
   
   
   
