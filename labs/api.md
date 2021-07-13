@@ -49,6 +49,8 @@ To retrieve the ACS Open API 3.0 specification, send an HTTP GET request to:
 https://admin.splunk.com/service/info/specs/v1/openapi.json
 ```
   
+You can view a `JSON` formatted verion [here](https://github.com/anthonygrees/get_shirt_hot_with_splunk/blob/main/labs/splunk_openapi.json).
+  
 ##### 1b. Generate an authentication token. 
 The ACS API accepts a SAML authentication token. You can generate this token in the Splunk Cloud UI. If your Splunk Cloud environment does not support SAML, you can use local accounts as an alternate authentication method.  
   
