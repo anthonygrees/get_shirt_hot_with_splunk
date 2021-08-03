@@ -27,5 +27,6 @@ The following is the lab modules and material:
 |     | **Helpful Links** |
 | 7.  | [GDI - Get Data In to Splunk](labs/gdi.md)  |
 | 8.  | [Splunk API Commands](labs/api.md)  |
+| 9.  | [New Sourcetype](labs/changesourcetype.md) |
   
   
