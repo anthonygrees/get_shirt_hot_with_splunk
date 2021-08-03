@@ -8,4 +8,4 @@ index=<CLIENTINDEX>
 | fields command
 ```
   
-Just make sure you set the time picker to the effected times. Then export those results, create a `oneshot.sh` script and ran it.
+Just make sure you set the time picker to the effected times. Then export those results, create a `oneshot.sh` script and run it.
